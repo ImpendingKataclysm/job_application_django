@@ -1,5 +1,7 @@
 from django.db import models
 
+MAX_FIELD_LEN = 80
+
 
 class Form(models.Model):
     """
@@ -9,15 +11,14 @@ class Form(models.Model):
     - last_name
     - email
     - date_available
-    - occupation
+    - employment status
     Text fields have a maximum length of MAX_FIELD_LEN
     """
-    MAX_FIELD_LEN = 80
     first_name = models.CharField(max_length=MAX_FIELD_LEN)
     last_name = models.CharField(max_length=MAX_FIELD_LEN)
     email = models.EmailField()
     date = models.DateField()
-    occupation = models.CharField(max_length=MAX_FIELD_LEN)
+    employment_status = models.CharField(max_length=MAX_FIELD_LEN)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
