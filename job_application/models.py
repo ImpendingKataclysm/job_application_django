@@ -18,7 +18,7 @@ class Form(models.Model):
     last_name = models.CharField(max_length=MAX_FIELD_LEN)
     email = models.EmailField()
     date = models.DateField()
-    employment_status = models.CharField(max_length=MAX_FIELD_LEN)
+    occupation = models.CharField(max_length=MAX_FIELD_LEN)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
